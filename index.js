@@ -71,7 +71,7 @@ FROM pg_catalog.pg_class AS c
 LEFT JOIN pg_catalog.pg_attribute AS a
 ON c.oid = a.attrelid AND a.attnum > 0
 LEFT JOIN pg_catalog.pg_type AS t 
-ON a.attypid = t.oid
+ON a.atttypid = t.oid
 WHERE c.relname IN ('users', 'observations', 'students', 'schools', 'tasks')
 ORDER BY c.relname, a.attnum;
 `);    
