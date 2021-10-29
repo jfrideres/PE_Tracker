@@ -80,7 +80,7 @@ RETURNING id as new_id;`);
        console.log(`Tracking task ${tasksId}`);
        
        const result = {
-         'response: (sqlInsert) ? (sqlInsert.rows[0]) : null
+         'response': (sqlInsert) ? (sqlInsert.rows[0]) : null
        };
        res.set({
          'Content-Type': 'application/json'
