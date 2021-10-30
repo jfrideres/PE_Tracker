@@ -13,7 +13,7 @@ const pool = new Pool({
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.json())
-  .use(express.urlencoded({ extended: true}))
+  .use(express.urlencoded({ extended: true }))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', async(req, res) => { 
@@ -26,7 +26,7 @@ express()
       const locals = {
         'tasks': (tasks) ? tasks.rows : null
       };
-      res.render('poges/index', locals);
+      res.render('pages/index', locals);
       client.release();
     }
     catch (err) {
@@ -55,7 +55,7 @@ ORDER BY c.relname, a.attnum;
     
       const locals = {
         'tables': (tables) ? tables.rows : null
-        'obs': (obs) ? obs.rows : null
+     //   'obs': (obs) ? obs.rows : null
       };
       
       res.render('pages/db-info', locals);
