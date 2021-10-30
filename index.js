@@ -54,8 +54,8 @@ ORDER BY c.relname, a.attnum;
 `SELECT * FROM observations`);
     
       const locals = {
-        'tables': (tables) ? tables.rows : null
-     //   'obs': (obs) ? obs.rows : null
+        'tables': (tables) ? tables.rows : null,
+        'obs': (obs) ? obs.rows : null
       };
       
       res.render('pages/db-info', locals);
