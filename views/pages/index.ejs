@@ -49,18 +49,6 @@
   <script>
 let currentTaskId = null;
 
-const observationInfo = async function() {
-  var instructor = document.getElementById("instructorName");
-  var observer = document.getElementById("observerName");
-  var school = document.getElementById("schoolName");
-  var date = document.getElementById("observationDate");
-  var grade = document.getElementById("observationGrade");
-  var topic = document.getElementById("observationTopic");
-  var student = document.getElementById("studentNumber");
-
-}
-
-
 const logTask = async function(id) {
   const response = await fetch('/log', {
     method: 'POST',
