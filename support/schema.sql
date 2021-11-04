@@ -24,7 +24,7 @@ CREATE TABLE observations (
   tasks_id INT NOT NULL,
   duration INTERVAL NOT NULL
 );
-
+/*
 CREATE TABLE observationInfo (
   id SERIAL PRIMARY KEY,
   observerName TEXT NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE observationInfo (
   topic TEXT NOT NULL,
   student INT NOT NULL
 );
-
+*/
 CREATE TABLE tasks (
   id SERIAL PRIMARY KEY,
   name TEXT NOT NULL

@@ -20,15 +20,27 @@
   
   <h1>Observation Information</h1>
   <ul>
-    <% obsInfo.forEach(function(r) { %>
-    <li>Observer's Name:<%= r.observerName %></li> 
-    <li>Instructor's Name:<%= r.instructorName %></li>
-    <li>School Name:<%= r.schoolName %></li>
-    <li>Date:<%= r.observationDate %></li>
+    < obsInfo.forEach(function(r) { %>
+    <li>Observer's Name:<%= r.observer %></li> 
+    <li>Instructor's Name:<%= r.instructor %></li>
+    <li>School Name:<%= r.school %></li>
+    <li>Date:<%= r.date %></li>
     <li>Grade:<%= r.grade %></li>
     <li>Topic:<%= r.topic %></li>
     <li>Student:<%= r.student %></li>
     <% }); %>
   </ul>
+  
+  <script>
+  const obsInfo = async function () {
+  var instructor = document.getElementById("instructorName");
+  var observer = document.getElementById("observerName");
+  var school = document.getElementById("schoolName");
+  var date = document.getElementById("observationDate");
+  var grade = document.getElementById("observationGrade");
+  var topic = document.getElementById("observationTopic");
+  var student = document.getElementById("studentNumber");
+  }
+  </script>
 </body>
 </html>

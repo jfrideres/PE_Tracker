@@ -52,10 +52,10 @@ ORDER BY c.relname, a.attnum;
 
       const obs = await client.query(
 `SELECT * FROM observations`);
-
+/*
       const obsInfo = await client.query(
 `SELECT * FROM observationInfo`);
-      
+*/      
     
       const locals = {
         'tables': (tables) ? tables.rows : null,
