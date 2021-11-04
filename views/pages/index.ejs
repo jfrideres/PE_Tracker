@@ -10,9 +10,56 @@
      <button id='<%= r.id %>'
       onClick='javascript:logTask(<%= r.id %>);'><%= r.name %></button>
       <% }); %>
-      
+    
+  <form>
+  <b>Observer's Name</b>
+  <input id="observerName" title="Please enter the name of the observer" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>Instructor's Name</b>
+  <input id="instructorName" title="Please enter the name of the instractor" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>School Name</b>
+  <input id="schoolName" title="Please enter the name of the school" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>Date</b>
+  <input id="observationDate" title="Please enter the date of the observation" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>Grade</b>
+  <input id="observationGrade" title="Please enter the grade of the observation" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>Topic</b>
+  <input id="observationTopic" title="Please enter the topic of the observation" type="text" onchange = "value = this.value">
+  </form>
+  
+  <form>
+  <b>Student Number</b>
+  <input id="studentNumber" title="Please enter the student number" type="number" onchange = "value = this.value">
+  </form>
+    
   <script>
 let currentTaskId = null;
+
+const observationInfo = async function() {
+  var instructor = document.getElementById("instructorName");
+  var observer = document.getElementById("observerName");
+  var school = document.getElementById("schoolName");
+  var date = document.getElementById("observationDate");
+  var grade = document.getElementById("observationGrade");
+  var topic = document.getElementById("observationTopic");
+  var student = document.getElementById("studentNumber");
+
+}
+
 
 const logTask = async function(id) {
   const response = await fetch('/log', {

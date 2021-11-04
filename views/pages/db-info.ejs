@@ -17,5 +17,18 @@
     <li><%= r.tasks_id %> for <%= r.duration.minutes || "00" %>:<%= r.duration.seconds || "00" %></li>
     <% }); %>
   </ul>
+  
+  <h1>Observation Information</h1>
+  <ul>
+    <% obsInfo.forEach(function(r) { %>
+    <li>Observer's Name:<%= r.observerName %></li> 
+    <li>Instructor's Name:<%= r.instructorName %></li>
+    <li>School Name:<%= r.schoolName %></li>
+    <li>Date:<%= r.observationDate %></li>
+    <li>Grade:<%= r.grade %></li>
+    <li>Topic:<%= r.topic %></li>
+    <li>Student:<%= r.student %></li>
+    <% }); %>
+  </ul>
 </body>
 </html>
